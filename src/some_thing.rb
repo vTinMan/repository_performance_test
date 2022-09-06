@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SomeThing < ActiveRecord::Base
   enum kind: {
     main: 0,

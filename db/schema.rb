@@ -10,21 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_02_151502) do
+ActiveRecord::Schema[7.0].define(version: 20_220_902_151_502) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "some_things", force: :cascade do |t|
-    t.string "name"
-    t.string "display_name"
-    t.string "short_description"
-    t.boolean "is_hidden", default: false
-    t.integer "kind_cd", default: 0
-    t.integer "category_id"
-    t.decimal "price", precision: 8, scale: 2
-    t.text "description"
-    t.text "comment"
-    t.jsonb "details", default: {}
+  create_table 'some_things', force: :cascade do |t|
+    t.string 'name'
+    t.string 'display_name'
+    t.string 'short_description'
+    t.boolean 'is_hidden', default: false
+    t.integer 'kind_cd', default: 0
+    t.integer 'category_id'
+    t.decimal 'price', precision: 8, scale: 2
+    t.text 'description'
+    t.text 'comment'
+    t.jsonb 'details', default: {}
   end
-
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SomeThingRepository
   SomeThingData = Struct.new(
     :name,
@@ -23,7 +25,7 @@ class SomeThingRepository
 
   def query(limit)
     some_thing_table = SomeThing.arel_table
-    query = some_thing_table.project(
+    some_thing_table.project(
       some_thing_table[:name], some_thing_table[:display_name], some_thing_table[:short_description],
       some_thing_table[:is_hidden], some_thing_table[:kind_cd], some_thing_table[:category_id], some_thing_table[:price]
     ).take(limit).to_sql

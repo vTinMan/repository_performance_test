@@ -1,6 +1,6 @@
-print "data preparing.."
+print 'data preparing..'
 
-100.times do |i|
+100.times do
   some_data = 500.times.map do
     {
       name: Faker::Alphanumeric.alphanumeric(number: 16),
@@ -8,7 +8,7 @@ print "data preparing.."
       short_description: Faker::Alphanumeric.alphanumeric(number: 88),
       is_hidden: rand(10).zero?,
       kind_cd: rand(-1..2),
-      category_id: rand(10000),
+      category_id: rand(10_000),
       price: rand(0.1..999.99).round(2),
       description: Faker::Alphanumeric.alphanumeric(number: 512),
       comment: Faker::Alphanumeric.alphanumeric(number: 512),
@@ -18,7 +18,7 @@ print "data preparing.."
         size: rand(0.1..999.99).round(2),
         ext_type: Faker::Alphanumeric.alphanumeric(number: 32),
         mode: Faker::Alphanumeric.alphanumeric(number: 12),
-        mark: Faker::Alphanumeric.alphanumeric(number: 32),
+        mark: Faker::Alphanumeric.alphanumeric(number: 32)
       }
     }
   end
