@@ -10,6 +10,6 @@ development:
   <<: *default
   database: repo_test_development
 
-development:
+test:
   <<: *default
   database: repo_test_test
